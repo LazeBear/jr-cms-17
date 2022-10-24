@@ -9,7 +9,8 @@
     "poststart": "pm2 log jrCMS17",
     "stop:pm2": "pm2 stop jrCMS17",
     "dev": "nodemon src/index.js",
-    "debug": "nodemon --inspect src/index.js"
+    "debug": "nodemon --inspect src/index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "pm2": "^5.2.2"
   },
   "devDependencies": {
+    "jest": "^29.2.1",
     "nodemon": "^2.0.20"
   }
 }
