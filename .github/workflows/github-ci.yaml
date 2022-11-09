@@ -1,5 +1,8 @@
 name: 'jr cms 17'
 
+env:
+  JWT_KEY: secret
+
 on:
   push:
     branches: [master]
