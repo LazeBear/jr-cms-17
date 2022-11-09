@@ -7,7 +7,7 @@ const isTeacher = require('../middleware/isTeacher');
 
 const v1Router = Router();
 
-v1Router.use('/students', studentRouter);
+v1Router.use('/students', authGuard, studentRouter);
 v1Router.use('/courses', authGuard, isTeacher, courseRouter);
 v1Router.use('/users', userRouter);
 

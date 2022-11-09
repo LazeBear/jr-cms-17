@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
+// const connectToDB = (connectionStr) => {
 const connectToDB = () => {
   // DB_HOST, DB_PORT, DB_PASSWORD
   const connectionString = process.env.CONNECTION_STRING;
+  // const connectionString = connectionStr || process.env.CONNECTION_STRING;
   if (!connectionString) {
     console.error('connection string is undefined');
     // 正常退出
