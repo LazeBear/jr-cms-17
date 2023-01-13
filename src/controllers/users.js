@@ -24,7 +24,7 @@ const login = async (req, res) => {
     res.status(401).json({ error: 'invalid username or password' });
     return;
   }
-  if (!user.validatePassword(password)) {
+  if (!(await user.validatePassword(password))) {
     res.status(401).json({ error: 'invalid username or password' });
     return;
   }
